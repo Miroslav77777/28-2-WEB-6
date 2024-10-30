@@ -9,14 +9,21 @@ const quantityInput = document.getElementById('quantity');
         const propertyGroup = document.getElementById('property-group');
 
         // Данные о товарах из JSON файла
+// Данные о товарах из JSON файла
         fetch('data.json')
             .then(response => response.json())
             .then(data => {
                 // Обработка данных и отрисовка калькулятора
-                calculateButton.addEventListener('click', (event) => {
-                    event.preventDefault(); // Предотвратить перезагрузку страницы
-                    calculatePrice();
-                });
+                // ...
+
+                // Добавление обработчика события DOMContentLoaded
+                window.addEventListener('DOMContentLoaded', calculatePrice);
+
+                // Добавление обработчиков событий для вызывания calculatePrice при изменении значений калькулятора
+                quantityInput.addEventListener('input', calculatePrice);
+                serviceTypeRadios.forEach(radio => radio.addEventListener('change', calculatePrice));
+                optionsSelect.addEventListener('change', calculatePrice);
+                propertyCheckbox.addEventListener('change', calculatePrice);
 
                 serviceTypeRadios.forEach(radio => {
                     radio.addEventListener('change', () => {
