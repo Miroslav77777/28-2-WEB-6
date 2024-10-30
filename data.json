@@ -1,0 +1,23 @@
+[
+    {
+        "basePrice": 100,
+        "options": [],
+        "property": null
+    },
+    {
+        "basePrice": 200,
+        "options": ["Опция 1", "Опция 2", "Опция 3"],
+        "optionsPrice": {
+            "Опция 1": 50,
+            "Опция 2": 70,
+            "Опция 3": 90
+        },
+        "property": null
+    },
+    {
+        "basePrice": 300,
+        "options": [],
+        "property": "Свойство 1",
+        "propertyPrice": 100
+    }
+]

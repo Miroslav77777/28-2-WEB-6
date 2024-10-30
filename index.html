@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор стоимости</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h2>Калькулятор стоимости</h2>
+        <div class="input-group">
+            <label for="quantity">Количество:</label>
+            <input type="number" id="quantity" min="1" value="1">
+            <span id="quantity-error" class="error"></span>
+        </div>
+        <div class="input-group">
+            <label for="service-type">Тип услуги:</label>
+            <div>
+                <input type="radio" id="service-type-1" name="service-type" value="1" checked>
+                <label for="service-type-1">Услуга 1</label>
+            </div>
+            <div>
+                <input type="radio" id="service-type-2" name="service-type" value="2">
+                <label for="service-type-2">Услуга 2</label>
+            </div>
+            <div>
+                <input type="radio" id="service-type-3" name="service-type" value="3">
+                <label for="service-type-3">Услуга 3</label>
+            </div>
+        </div>
+        <div class="input-group" id="options-group">
+            <label for="options">Опции:</label>
+            <select id="options">
+                <!-- Опции будут добавлены динамически -->
+            </select>
+        </div>
+        <div class="input-group" id="property-group">
+            <label for="property">Свойство:</label>
+            <input type="checkbox" id="property">
+            <label for="property">Свойство 1</label>
+        </div>
+        <div class="input-group">
+            <button class="button" id="calculate-button">Посчитать</button>
+        </div>
+        <div class="result" id="result">
+            <!-- Результат будет добавлен динамически -->
+        </div>
+    </div>
+
+</body>
+</html>
